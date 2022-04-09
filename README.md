@@ -5,7 +5,7 @@ Group project at end of boot camp
 Data Fields in Source Data
 
 ### 1 timestamp
-Keep column. Change name to . Check if unique, and if unique can serve as a key value.
+Probably drop. Seems to be when the job was added to the database. Shouldn't have a bearing on the salary amount we want to predict.
 
 ### 2 company
 Keep column. Categorical value which may need to be converted to numeric. Investigate how many unique values and consider bucketing.
@@ -53,7 +53,7 @@ Probably drop. No documentation as to meaning, except what we can figure out our
 Maybe keep. Investigate. Seems to be 0 for international rows, so could possibly be used as a proxy for interenational.
 
 ### 17 rowNumber
-Probably drop. Seems to be an original row number/key value but highest value is in the 80000s.
+Keep. Seems to be an original row number/key value. Used in our Postgres table as primary key value.
 
 ### 18 Masters_Degree
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
