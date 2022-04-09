@@ -89,6 +89,6 @@ Boolean field, presumably 0 if no and 1 if yes.
 Drop. All values are NA. Was probably the original race column before split into many columns.
 
 ### 29 Education
-Drop. All values are NA. Was probably the original race column before split into many columns.
+Drop. All values are NA. Was probably the original education column before split into many columns.
 
 
