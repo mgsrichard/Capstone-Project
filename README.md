@@ -17,7 +17,7 @@ Data Science and STEM Salaries from June 7 2017 to Aug 17 2021
   https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries
 
 •	Description of your data source (feel free to include a sample of it too)
-
+[Insert image of abbreviated datatable]
 
 •	Reasons for your selected topic
 
@@ -25,8 +25,6 @@ Data Science and STEM Salaries from June 7 2017 to Aug 17 2021
 We found the data source relevant to our current career interests.  In addition,the dataset was appropriately dimensioned and did not have a lot of missing data.  Datatypes varied across the columns and there are several features that can be used to for modeling.  
 
 •	Questions you hope to answer with this data
-
-
 ### Question: 
 
 - What features does this data contain and how many rows of data are included?  How many years? How many professions? Employers?
