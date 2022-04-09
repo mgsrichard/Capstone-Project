@@ -42,8 +42,24 @@ We found the data source relevant to our current career interests.  In addition,
 
 ### Machine Learning Model
 •	Present a provisional machine learning model
+  ![image](https://user-images.githubusercontent.com/94234511/162580311-abc92bd0-c16b-4c1a-8016-2f0905fd7f07.png)
+
+- We plan to deploy a supervised learning model that can be used to predict salaries for data scientists and STEM professionals.  
+- Regression is used to predict continuous variables. The regression model's algorithms would attempt to learn patterns that exist among these factors. When presented with the data for a new row(index), the model would make a prediction of the output, based on previously learned patterns from the dataset.
+- In both classification and regression problems, the dataset is divided into features and target. Features are the variables used to make a prediction. Target is the predicted outcome.
+
+  ![image](https://user-images.githubusercontent.com/94234511/162580529-530ba3df-f50e-4960-a675-cd2b0d0ec758.png)
+
 •	This can be a description of what Machine Learning model you would like to use based on a past Machine Learning example from class or one of the activities
+
+  ![image](https://user-images.githubusercontent.com/94234511/162579995-a4929861-6a6a-4708-9e58-f24fce80881c.png)
+
+  ![image](https://user-images.githubusercontent.com/94234511/162580102-7f2c75fb-5c78-4d70-853c-138aeee1347b.png)
+
 •	Include plans for how it would take in the data from your provisional database (which language to bring it in ie. from PgAdmin)
+
+Use Python to connect model to database in PgAdmin 
+
 •	(This information can be included in the ReadMe file)
 
 
