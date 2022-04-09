@@ -13,7 +13,7 @@ Create table salaries (
 	bonus FLOAT NOT NULL,
 	gender VARCHAR(32) NOT NULL,
 	cityid INT NOT NULL,
-	dmaid INT NOT NULL,
+	dmaid VARCHAR NOT NULL,
 	rowNumber INT NOT NULL,
 	Masters_Degree INT NOT NULL,
 	Bachelors_Degree INT NOT NULL,
