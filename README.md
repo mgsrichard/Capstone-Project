@@ -19,7 +19,7 @@ Martha, Lucien and Cheryl
     - the PowerPoint file intro_presentation.pptx gives a more sophisticated and slightly less detailed overview/presentation of our project
 
 ### Topic: 
-Data Science and STEM Salaries from June 7 2017 to Aug 17 2021
+Data Science and STEM Salaries from June 7, 2017 to August 17, 2021
   https://www.kaggle.com/datasets/jackogozaly/data-science-and-stem-salaries
 
 - Description of your data source (feel free to include a sample of it too)
@@ -131,28 +131,21 @@ Drop. All values are NA. Was probably the original race column before split into
     - **Education:**
 Drop. All values are NA. Was probably the original education column before split into many columns.
     
-- How the Machine Learning model might connect with this database: we will connect python to PostgresSQL and output cleaned data and machine learning results to Postgres. Here are some examples of code from the Movies-ETL challenge where we connected python to a PostgreSQL database. 
+- How the Machine Learning model might connect with this database
+    - we will connect python to PostgresSQL/pgAdmin and output cleaned data and machine learning results to PostgreSQL/pgAdmin. Here are some examples of code from the Movies-ETL challenge where we connected python to a PostgreSQL/pgAdmin database. 
+        ![python to sql 1](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_1.png)
+        ![python to sql 2](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_2.png)
+        ![python to sql 3](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_3.png)
 
 
 ### Machine Learning Model
 -	Present a provisional machine learning model
-  
-- We plan to deploy a supervised learning model that can be used to predict salaries for data scientists and STEM professionals.  
-- Regression is used to predict continuous variables. The regression model's algorithms would attempt to learn patterns that exist among these factors. When presented with the data for a new row(index), the model would make a prediction of the output, based on previously learned patterns from the dataset.
-- In both classification and regression problems, the dataset is divided into features and target. Features are the variables used to make a prediction. Target is the predicted outcome.
-
-  ![image](https://user-images.githubusercontent.com/94234511/162580529-530ba3df-f50e-4960-a675-cd2b0d0ec758.png)
-
--	This can be a description of what Machine Learning model you would like to use based on a past Machine Learning example from class or one of the activities
-
-  ![image](https://user-images.githubusercontent.com/94234511/162579995-a4929861-6a6a-4708-9e58-f24fce80881c.png)
-
-  ![image](https://user-images.githubusercontent.com/94234511/162580102-7f2c75fb-5c78-4d70-853c-138aeee1347b.png)
-
--	Include plans for how it would take in the data from your provisional database (which language to bring it in ie. from PgAdmin)
-
-Use Python to connect model to database in PgAdmin 
-
--	(This information can be included in the ReadMe file)
-
-
+![supervised learning picture](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/supervised-learning.png)
+    - We propose to use the LinearRegression model from Scikit-learn to create a supervised linear regression machine learning model and our input data to predict salaries for data scientists and STEM professionals. The example from module 17.2.3 shown below is a good starting place for our coding.	
+     ![image](https://user-images.githubusercontent.com/94234511/162580102-7f2c75fb-5c78-4d70-853c-138aeee1347b.png)
+- Regression is used to predict continuous variables. The regression model's algorithms would attempt to learn patterns that exist among these factors. When presented with the data for a new row(index), the model would make a prediction of the output, based on previously learned patterns from the dataset. While the example from the module only uses one feature, years of service, to predict  salaries, the model is also able to take in multiple features to do a multiple regression.  
+- In both classification and regression problems, the dataset is divided into features and target. Features are the variables used to make a prediction. Target is the predicted outcome. The target in our data will be the final total salary field (after we clean up the data) and the other fields will be our features. 
+- We intend to use trial and error with different linear regression models and data columns to make the most accurate model possible. We are aiming for a model that is at least 75% accurate. We may use the LinearRegression model, but we have also glanced through the Scikit-learn documentation and seen that there are some variations of linear regression, including Lasso and Elastic-Net that are also available to try. Some of these other models also seem to help in deciding how to narrow which features are most important to the model, so that could be helpful.
+- Once we have fitted and trained our model and reached our 75% accuracy threshold, we will then create a way to present our results. We would like to create an interactive web table as we did in the UFO and Bellybutton challenges where the user can enter data (years of experience, job title, location, etc.) and get an estimated salary or salary range as an output. (A salary range could be created using the salary prediction and our accuracy percentage, for example, a prediction of 100,000 at 75% accuracy would translate to a salary range of 75,000 to 125,000). We envision two possible ways to populate the data in our web table:
+    - Connect our web table to the python machine learning model and directly run the model each time a user enters search terms
+    - Create a large table to input into the machine learning model which will incorporate all possible permutations of input, use the machine learning model to predict salaries for each potential query, and combine the input plus the salary predictions into a large table that is static and searched each time the user enters search terms.
