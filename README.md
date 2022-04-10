@@ -24,6 +24,7 @@ Data Science and STEM Salaries from June 7, 2017 to August 17, 2021
 
 - Description of your data source (feel free to include a sample of it too)
     - The Kaggle description of the data says, "62,000 salary records from top companies. This data was scraped off levels.fyi." 
+    - The data has 62,642 rows, 29 columns, columns including company name, job title, salary, bonus, stock option, gender, race, and location
 ![pic of kaggle data source](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/Kaggle_data_source.png)
 
 - Reason: 
