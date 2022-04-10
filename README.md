@@ -4,7 +4,7 @@ Martha, Lucien and Cheryl
 
 ### GitHub:
 -	Your Main Branch has a ReadMe file 
-    -	you're reading it!
+    -	You're reading it!
 -	Your ReadMe file includes a description for how your team plans to communicate for the project
     - Communication plan: use Slack to chat between meetings, meet up during class and office hours to work and plan together, plan additional meetings via zoom as needed
 -	You have individual branches setup for each of your team members:
@@ -15,8 +15,8 @@ Martha, Lucien and Cheryl
 
 ### Presentation:
 -	Include your choice of a PowerPoint, Word Document, ReadMe file, etc. with the following information
-    - the project is described in detail in this README
-    - the PowerPoint file intro_presentation.pptx gives a more sophisticated and slightly less detailed overview/presentation of our project
+    - The project is described in detail in this README
+    - The PowerPoint file https://github.com/mgsrichard/Capstone-Project/blob/main/intro_presentation.pptx gives a more sophisticated and slightly less detailed overview/presentation of our project
 
 ### Topic: 
 Data Science and STEM Salaries from June 7, 2017 to August 17, 2021
