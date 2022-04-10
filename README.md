@@ -16,7 +16,7 @@ Martha, Lucien and Cheryl
 ### Presentation:
 -	Include your choice of a PowerPoint, Word Document, ReadMe file, etc. with the following information
     - the project is described in detail in this README
-    - the PowerPoint file intro_presentation.pptx gives a more sophisticated and less detailed overview/presentation of our project
+    - the PowerPoint file intro_presentation.pptx gives a more sophisticated and slightly less detailed overview/presentation of our project
 
 ### Topic: 
 Data Science and STEM Salaries from June 7 2017 to Aug 17 2021
@@ -44,100 +44,99 @@ Data Science and STEM Salaries from June 7 2017 to Aug 17 2021
     ![schema image](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/Schema.png)
  
 - Plan to investigate and clean the original data fields
-##### 1) timestamp
+    - **timestamp:**
 Probably drop. Seems to be when the job was added to the database. Shouldn't have a bearing on the salary amount we want to predict.
 
-##### 2) company
+    - **company:**
 Keep column. Categorical value which may need to be converted to numeric. Investigate how many unique values and consider bucketing.
 
-##### 3) level
+    - **level:**
 Probably drop this field, there are >2500 unique values here, they don't coordinate with each other well, probably reflect different meanings/salary scales at different companies
 
-##### 4) title
+    - **title:**
 Keep column, 15 values, consider bucketing.
 
-##### 5) totalyearlycompensation
+    - **totalyearlycompensation:**
 Keep column. Will be our target in machine learning. Investigate whether it coordinates properly with base, bonus, and stock option columns and if there are any modifications to be made to make it more accurate. One of the early rows in the data seems to indicate that some rows may not be including bonus in total annual pay.
 
-##### 6) location
+    - **location:**
 Keep column. Some are US, some international. Consider how to handle city, state together or separate, and whether to add a country column.
 
-##### 7) yearsofexperience
+    - **yearsofexperience:**
 Keep column. Presumably all years of relevant experience with all employers.
 
-##### 8) yearsatcompany
+    - **yearsatcompany:**
 Keep column. Years in current job.
 
-##### 9) tag
+    - **tag:**
 Probably drop. Not very clear what it means, seems to describe some job responsibilities.
 
-##### 10) basesalary
+    - **basesalary:**
 Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
 
-##### 11) stockgrantvalue
+    - **stockgrantvalue:**
 Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
 
-##### 12) bonus
+    - **bonus:**
 Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
 
-##### 13) gender
+    - **gender:**
 Keep. Missing for a significant number of records, 19941 records of 62642 have a value of NA, other, or an erroneous title field that got stored in there. Still have for approximately 2/3 of the data. Need to consider whether these missing values mean we should either 1- exclude these 19000+ rows from the data or 2-not consider gender in our data or 3-create dummy data here (probably not a good idea)
 
-##### 14) other details
+    - **other details:**
 Probably drop. Many blank values, a storage for different sorts of details that are probably not pertinent to our analysis.
 
-##### 15) cityid
+    - **cityid:**
 Probably drop. No documentation as to meaning, except what we can figure out ourselves by comparison to the location field.
 
-##### 16) dmaid
+    - **dmaid:**
 Maybe keep. Investigate. Seems to be 0 for international rows, so could possibly be used as a proxy for interenational.
 
-##### 17) rowNumber
+    - **rowNumber:**
 Keep. Seems to be an original row number/key value. Used in our Postgres table as primary key value.
 
-##### 18) Masters_Degree
+    - **Masters_Degree:**
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
 
-##### 19) Bachelors_Degree
+    - **Bachelors_Degree:**
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
 
-##### 20) Doctorate_Degree
+    - **Doctorate_Degree:**
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
 
-##### 21) Highschool
+    - **Highschool:**
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
 
-##### 22) Some_College
+    - **Some_College:**
 Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
 
-##### 23) Race_Asian
+    - **Race_Asian:**
 Boolean field, presumably 0 if no and 1 if yes. 
 
-##### 24) Race_White
+    - **Race_White:**
 Boolean field, presumably 0 if no and 1 if yes. 
 
-##### 25) Race_Two_Or_More
+    - **Race_Two_Or_More:**
 Boolean field, presumably 0 if no and 1 if yes. 
 
-##### 26) Race_Black
+    - **Race_Black:**
 Boolean field, presumably 0 if no and 1 if yes. 
 
-##### 27) Race_Hispanic
+    - **Race_Hispanic:**
 Boolean field, presumably 0 if no and 1 if yes. 
 
-##### 28) Race
+    - **Race:**
 Drop. All values are NA. Was probably the original race column before split into many columns.
 
-##### 29) Education
+    - **Education:**
 Drop. All values are NA. Was probably the original education column before split into many columns.
     
-    #### How the Machine Learning model might connect with this database
+- How the Machine Learning model might connect with this database: we will connect python to PostgresSQL and output cleaned data and machine learning results to Postgres. Here are some examples of code from the Movies-ETL challenge where we connected python to a PostgreSQL database. 
 
 
 ### Machine Learning Model
 -	Present a provisional machine learning model
-  ![image](https://user-images.githubusercontent.com/94234511/162580311-abc92bd0-c16b-4c1a-8016-2f0905fd7f07.png)
-
+  
 - We plan to deploy a supervised learning model that can be used to predict salaries for data scientists and STEM professionals.  
 - Regression is used to predict continuous variables. The regression model's algorithms would attempt to learn patterns that exist among these factors. When presented with the data for a new row(index), the model would make a prediction of the output, based on previously learned patterns from the dataset.
 - In both classification and regression problems, the dataset is divided into features and target. Features are the variables used to make a prediction. Target is the predicted outcome.
