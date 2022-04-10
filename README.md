@@ -1,5 +1,5 @@
 # Capstone-Project
-Group project at end of boot camp
+Group project at end of boot camp <br>
 Martha, Lucien and Cheryl
 
 ### GitHub:
