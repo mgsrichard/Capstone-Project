@@ -91,7 +91,7 @@ Probably drop. Many blank values, a storage for different sorts of details that 
 Probably drop. No documentation as to meaning, except what we can figure out ourselves by comparison to the location field.
 
     - **dmaid:**
-Maybe keep. Investigate. Seems to be 0 for international rows, so could possibly be used as a proxy for interenational.
+Maybe keep. Investigate. Seems to be 0 for international rows, so could possibly be used as a proxy for international.
 
     - **rowNumber:**
 Keep. Seems to be an original row number/key value. Used in our Postgres table as primary key value.
