@@ -12,11 +12,11 @@ def home():
 
 @app.route("/Graphs")
 def graphs():
-    return render_template('index.html', title='Graphs')
+    return render_template('graphs.html', title='Graphs')
 
 @app.route("/Predictor")
 def predictor():
-    return render_template('index.html',title='Predictor')
+    return render_template('predictor.html',title='Predictor')
 
 if __name__ == '__main__':
     app.run()
