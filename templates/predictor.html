@@ -25,6 +25,48 @@
             </ul>
         </nav>
     </div>
-    <p>Rorem lipsum</p>
+    <div class="container">
+        <P> <br>
+            As part of the predictor model, a region is used based on closeness to major metropolitan areas with a large STEM population. <br>
+            Regions are based on a distance of roughly 40 miles from the specified city center and the final region qualifies all other locations. <br>
+            <br>
+            Region Listing:
+            <ul>
+                <li>Region 1: San Francisco Metro Area</li>
+                <li>Region 2: Los Angeles Metro Area </li>
+                <li>Region 3: Seattle Metro Area</li>
+                <li>Region 4: Boston Metro Area</li>
+                <li>Region 5: Chicago Metro Area</li>
+                <li>Region 6: Dallas-Ft. Worth Metro Area</li>
+                <li>Region 7: Atlanta Metro Area</li>
+                <li>Region 8: Washington DC Metro Area</li>
+                <li>Region 9: New York City Metro Area</li>
+                <li>Region 10: All Other Locations </li>
+            </ul>
+        </P>
+        <form method="post" enctype="multipart/form-data">
+            Years of Experience: <input type="number" name="yearsofexperience" min="0" max="60"><br>
+            Years at Company: <input type="number" name="yearsatcompany" min="0" max="60"><br>
+            Region: <input type="number" name="region" min="1" max="10"><br>
+            <input type="submit" value="Predict!">
+        </form>
+        Predicted Salary is in Bracket {{pred}}
+        <P> <br>
+            The Predicted Salary Bracket is a scale
+            <br>
+            Salary Brackets:
+            <ul>
+                <li>Bracket 1: $25,000-50,000</li>
+                <li>Bracket 2: $50,001-75,000 </li>
+                <li>Bracket 3: $75,001-100,000</li>
+                <li>Bracket 4: $100,001-125,000</li>
+                <li>Bracket 5: $125,001-150,000</li>
+                <li>Bracket 6: $150,001-175,000</li>
+                <li>Bracket 7: $175,001-200,000</li>
+                <li>Bracket 8: $200,001-225,000</li>
+                <li>Bracket 9: $225,001 and Higher</li>
+            </ul>
+        </P>
+    </div>
 </body>
 </html>
