@@ -203,7 +203,6 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 - Cleaned_Salary_Data.csv
 - Training Data Shape (46977 rows, 38 columns)
 - Test Data (15660 rows, 38 columns)
-![image](https://user-images.githubusercontent.com/94234511/165018049-358243a4-57de-406c-9a6d-9bc33f6c83cd.png)
 
 [image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
 
@@ -216,7 +215,7 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 - Resources/US_Salary_Preprocessed_new_regions.csv
 - Training Data Shape = 33,542 rows, 3 columns
 - Test Data Shape  = 11,181 rows, 3 columns
-- 
+
 ![image](https://user-images.githubusercontent.com/94234511/165018007-b5dc4247-cf21-4369-afbd-f0cf9165ea16.png)
 
 - Predictive Accuracy = 0.391
