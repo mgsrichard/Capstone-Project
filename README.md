@@ -206,6 +206,7 @@ Test Data (15660 rows, 38 columns)
 [image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
 Predictive Accuracy = 0.41 
 F1 Score = 0.41
+![image](https://user-images.githubusercontent.com/94234511/165019015-215f1b6a-e36a-49bf-8830-c6fe4ba4df6d.png)
 
 #### RFM - 3 Features
 Resources/US_Salary_Preprocessed_new_regions.csv"
@@ -214,6 +215,7 @@ Test Data Shape  = 11,181 rows, 3 columns
 ![image](https://user-images.githubusercontent.com/94234511/165018007-b5dc4247-cf21-4369-afbd-f0cf9165ea16.png)
 Predictive Accuracy = 0.391
 F1 Score = 0.39!
+![image](https://user-images.githubusercontent.com/94234511/165018973-6b9fe9ca-8b6b-448c-a00a-361e44b710b7.png)
 
 ### Database Connection 
 - We envision two possible ways to populate the data in our web table:
