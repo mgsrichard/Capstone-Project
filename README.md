@@ -160,17 +160,17 @@ Drop. All values are NA. Was probably the original education column before split
         - The total number of rows with data in the race columns is 22426 out of 62637 row
     - Identified and corrected additional typographical and formatting errors in the data
 
-![image](https://user-images.githubusercontent.com/94234511/165016989-32fba604-96b3-49f5-86cb-f5b0b0c6cc43.png)
+[image](https://user-images.githubusercontent.com/94234511/165016989-32fba604-96b3-49f5-86cb-f5b0b0c6cc43.png)
 ### Feature Engineering
 
 FEATURE ENGINEERING – Salary level
-![image](https://user-images.githubusercontent.com/94234511/165017640-5e7a482b-a2a0-4eac-b7ab-19f0c29a18d1.png)
+[image](https://user-images.githubusercontent.com/94234511/165017640-5e7a482b-a2a0-4eac-b7ab-19f0c29a18d1.png)
 
 - For rows where basesalary = 0, set equal to totalyearlycompensation 
 - Create a target value from the base salary by bucketing
 - Mean plus two std dev. would be 149,172 + 44,382 + 44,382 = 237,936
 - #Make salary bands of 25,000 for a total of 15 salary levels 
-![image](https://user-images.githubusercontent.com/94234511/165017702-7ade3729-a629-4d65-ae82-48ed8e3dd5aa.png)
+[image](https://user-images.githubusercontent.com/94234511/165017702-7ade3729-a629-4d65-ae82-48ed8e3dd5aa.png)
 
 ### Machine Learning Model
 -	Present a provisional machine learning model
@@ -189,23 +189,23 @@ FEATURE ENGINEERING – Salary level
 - The slope = [5040.09]
 The y-intercept = 163190.93
 r = 0.398 
-![image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
+[image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
 
 
 - Provisonal Learing Model Selection 
 Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
-![image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
+[image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
 
 #### RFM - All Features
 Cleaned_Salary_Data.csv
 Training Data Shape (46977 rows, 38 columns)
 Test Data (15660 rows, 38 columns)
-![image](https://user-images.githubusercontent.com/94234511/165018049-358243a4-57de-406c-9a6d-9bc33f6c83cd.png)
+[image](https://user-images.githubusercontent.com/94234511/165018049-358243a4-57de-406c-9a6d-9bc33f6c83cd.png)
 
-![image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
+[image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
 Predictive Accuracy = 0.41 
 F1 Score = 0.41
-![image](https://user-images.githubusercontent.com/94234511/165017951-d5375651-2a7e-469f-b591-a0ba0f84b7c5.png)
+[image](https://user-images.githubusercontent.com/94234511/165017951-d5375651-2a7e-469f-b591-a0ba0f84b7c5.png)
 
 #### RFM - 3 Features
 Resources/US_Salary_Preprocessed_new_regions.csv"
