@@ -1,6 +1,7 @@
 # Capstone-Project
 Group project at end of boot camp <br>
 Martha, Lucien and Cheryl
+Updated 04-24-2022
 
 ### GitHub:
 -	Your Main Branch has a ReadMe file 
@@ -189,32 +190,34 @@ FEATURE ENGINEERING – Salary level
 - The slope = [5040.09]
 The y-intercept = 163190.93
 r = 0.398 
-[image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
+![image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
 
 
 - Provisonal Learing Model Selection 
 Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
-[image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
+![image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
 
 #### RFM - All Features
 Cleaned_Salary_Data.csv
 Training Data Shape (46977 rows, 38 columns)
 Test Data (15660 rows, 38 columns)
-[image](https://user-images.githubusercontent.com/94234511/165018049-358243a4-57de-406c-9a6d-9bc33f6c83cd.png)
+![image](https://user-images.githubusercontent.com/94234511/165018049-358243a4-57de-406c-9a6d-9bc33f6c83cd.png)
 
 [image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
 Predictive Accuracy = 0.41 
 F1 Score = 0.41
-[image](https://user-images.githubusercontent.com/94234511/165017951-d5375651-2a7e-469f-b591-a0ba0f84b7c5.png)
 
 #### RFM - 3 Features
 Resources/US_Salary_Preprocessed_new_regions.csv"
 Training Data Shape = 33,542 rows, 3 columns
 Test Data Shape  = 11,181 rows, 3 columns
 ![image](https://user-images.githubusercontent.com/94234511/165018007-b5dc4247-cf21-4369-afbd-f0cf9165ea16.png)
-
+Predictive Accuracy = 0.391
+F1 Score = 0.39!
 
 ### Database Connection 
 - We envision two possible ways to populate the data in our web table:
     - Connect our web table to the python machine learning model and directly run the model each time a user enters search terms
     - Create a large table to input into the machine learning model which will incorporate all possible permutations of input, use the machine learning model to predict salaries for each potential query, and combine the input plus the salary predictions into a large table that is static and searched each time the user enters search terms.
+    - ![image](https://user-images.githubusercontent.com/94234511/165018712-c916da49-3c1d-46ce-9721-588e4cae3041.png)
+
