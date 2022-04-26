@@ -27,7 +27,25 @@ def predictor():
         yearsatcompany = request.form["yearsatcompany"]
         region = request.form["region"]
         pred =  model.predict(np.array([[int(yearsofexperience), int(yearsatcompany), int(region)]]))
-        return render_template('predictor.html', pred=str(pred))
+        if pred == 1:
+            output = "Your predicted salary is between $25,000-50,000"
+        elif pred == 2:
+            output = "Your predicted salary is between $50,001-75,000"
+        elif pred == 3:
+            output = "Your predicted salary is between $75,001-100,000"  
+        elif pred == 4:
+            output = "Your predicted salary is between $100,001-125,000" 
+        elif pred == 5:
+            output = "Your predicted salary is between $125,001-150,000" 
+        elif pred == 6:
+            output = "Your predicted salary is between $150,001-175,000" 
+        elif pred == 7:
+            output = "Your predicted salary is between $175,001-200,000" 
+        elif pred == 8:
+            output = "Your predicted salary is between $200,001-225,000" 
+        else:
+            output = "Your predicted salary is greater than $225,000" 
+        return render_template('predictor.html', output=str(output))
     return render_template('predictor.html')
 
 
