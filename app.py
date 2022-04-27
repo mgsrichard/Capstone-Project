@@ -48,6 +48,28 @@ def predictor():
         return render_template('predictor.html', output=str(output))
     return render_template('predictor.html')
 
+@app.route("/top5predictor", methods=["GET","POST"])
+def top5_predictor():
+    if request.method == "POST":
+        yearsofexperience = request.form["yearsofexperience"]
+        company = request.form["company"]
+        if company == "1":
+            salary = int(1903.42696934*int(yearsofexperience)+130039.0242661743)
+            output_top5 = f"Your predicted base salary is ${salary:,}."
+        elif company == "2":
+            salary = int(34.9212412254*int(yearsofexperience)+122996.3840904702)
+            output_top5 = f"Your predicted base salary is ${salary:,}."
+        elif company == "3":
+            salary = int(2977.60000892*int(yearsofexperience)+133111.62676324398)
+            output_top5 = f"Your predicted base salary is ${salary:,}."
+        elif company == "4":
+            salary = int(4024.49085332*int(yearsofexperience) + 140405.149243547)
+            output_top5 = f"Your predicted base salary is ${salary:,}."
+        elif company == "5":
+            salary = int(3187.42993661*int(yearsofexperience) + 138302.56440980232)
+            output_top5 = f"Your predicted base salary is ${salary:,}."
+        return render_template('top5predictor.html', output_top5=str(output_top5))
+    return render_template('top5predictor.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
