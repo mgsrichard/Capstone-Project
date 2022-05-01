@@ -90,9 +90,6 @@ FEATURE ENGINEERING – Salary level
 ![image](https://user-images.githubusercontent.com/94234511/166168409-5f62e922-c19d-4600-80f0-c4d0d043ed3c.png)
 
 
-![image](https://user-images.githubusercontent.com/94234511/165017702-7ade3729-a629-4d65-ae82-48ed8e3dd5aa.png)
-
-
 ### Feature Engineering - Regions 
 - Look at each metro area and calculate the distances from downtown and include participants within 30-50 miles. 
 - Start by naming & retrieving long/lat for each metro area
