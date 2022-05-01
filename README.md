@@ -137,8 +137,6 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 - Training Data Shape (46977 rows, 38 columns)
 - Test Data (15660 rows, 38 columns)
 
-[image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
-
 - Predictive Accuracy = 0.41 
 
 ![image](https://user-images.githubusercontent.com/94234511/165019015-215f1b6a-e36a-49bf-8830-c6fe4ba4df6d.png)
