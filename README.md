@@ -11,14 +11,14 @@ Updated 04-24-2022
 -	You have individual branches setup for each of your team members:
     - Cheryl has the Cheryl branch
     - Lucien has the dummy_database branch
-    - Martha has the presentation branch, also some data investigation stuff is in there
--	Each team member has at least four commits from the duration of the first segment
+    - Martha has the main branch
+-	Each team member has at least four commits from each segment of the project
 
 ### Presentation:
 -	Include your choice of a PowerPoint, Word Document, ReadMe file, etc. with the following information
     - The project is described in detail in this README
-    - The PowerPoint file https://github.com/mgsrichard/Capstone-Project/blob/main/Segment%202_presentation.pptx gives a more sophisticated and slightly less detailed overview/presentation of our project
-- Here is the agenda for Segment 2 Presentation: 
+    - The PowerPoint file https://github.com/mgsrichard/Capstone-Project/blob/main/Segment%202_presentation.pptx gives a more sophisticated and slightly more detailed overview/presentation of our project
+- Here is the agenda for Segment 3 Presentation: 
     - ![image](https://user-images.githubusercontent.com/94234511/165016366-5de88506-e051-4632-9789-8604236e30a1.png)
 
 ### Topic: 
@@ -41,105 +41,8 @@ Data Science and STEM Salaries from June 7, 2017 to August 17, 2021
 - Develop the ERD and connect a SQL Database to the model 
 - Present our results via an interactive table to predict salaries for data scientists and STEM professionals based on the most predictive features
 
-### Database
--	Present a provisional database that stands in for the final database
-    #### Preliminary schema for bringing in our data: <br>
-    ![schema image](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/Schema.png)
+Here is a visual illustration of our project
  
-#### Original Plan to investigate and clean the original data fields
-    - **timestamp:**
-Probably drop. Seems to be when the job was added to the database. Shouldn't have a bearing on the salary amount we want to predict.
-
-    - **company:**
-Keep column. Categorical value which may need to be converted to numeric. Investigate how many unique values and consider bucketing.
-
-    - **level:**
-Probably drop this field, there are >2500 unique values here, they don't coordinate with each other well, probably reflect different meanings/salary scales at different companies
-
-    - **title:**
-Keep column, 15 values, consider bucketing.
-
-    - **totalyearlycompensation:**
-Keep column. Will be our target in machine learning. Investigate whether it coordinates properly with base, bonus, and stock option columns and if there are any modifications to be made to make it more accurate. One of the early rows in the data seems to indicate that some rows may not be including bonus in total annual pay.
-
-    - **location:**
-Keep column. Some are US, some international. Consider how to handle city, state together or separate, and whether to add a country column.
-
-    - **yearsofexperience:**
-Keep column. Presumably all years of relevant experience with all employers.
-
-    - **yearsatcompany:**
-Keep column. Years in current job.
-
-    - **tag:**
-Probably drop. Not very clear what it means, seems to describe some job responsibilities.
-
-    - **basesalary:**
-Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
-
-    - **stockgrantvalue:**
-Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
-
-    - **bonus:**
-Keep although may not ultimately be used in machine learning model. Use to investigate and settle on the salary value we will use for target as described above for totalyearlycompensation.
-
-    - **gender:**
-Keep. Missing for a significant number of records, 19941 records of 62642 have a value of NA, other, or an erroneous title field that got stored in there. Still have for approximately 2/3 of the data. Need to consider whether these missing values mean we should either 1- exclude these 19000+ rows from the data or 2-not consider gender in our data or 3-create dummy data here (probably not a good idea)
-
-    - **other details:**
-Probably drop. Many blank values, a storage for different sorts of details that are probably not pertinent to our analysis.
-
-    - **cityid:**
-Probably drop. No documentation as to meaning, except what we can figure out ourselves by comparison to the location field.
-
-    - **dmaid:**
-Maybe keep. Investigate. Seems to be 0 for international rows, so could possibly be used as a proxy for international.
-
-    - **rowNumber:**
-Keep. Seems to be an original row number/key value. Used in our Postgres table as primary key value.
-
-    - **Masters_Degree:**
-Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
-
-    - **Bachelors_Degree:**
-Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
-
-    - **Doctorate_Degree:**
-Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
-
-    - **Highschool:**
-Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
-
-    - **Some_College:**
-Boolean field, presumably 0 if no and 1 if yes. Probably keep. Consider using an encoded score (if appropriate within ML model) to combine all education columns. All education fields seem to indicate highest level completed.
-
-    - **Race_Asian:**
-Boolean field, presumably 0 if no and 1 if yes. 
-
-    - **Race_White:**
-Boolean field, presumably 0 if no and 1 if yes. 
-
-    - **Race_Two_Or_More:**
-Boolean field, presumably 0 if no and 1 if yes. 
-
-    - **Race_Black:**
-Boolean field, presumably 0 if no and 1 if yes. 
-
-    - **Race_Hispanic:**
-Boolean field, presumably 0 if no and 1 if yes. 
-
-    - **Race:**
-Drop. All values are NA. Was probably the original race column before split into many columns.
-
-    - **Education:**
-Drop. All values are NA. Was probably the original education column before split into many columns.
-    
-- How the Machine Learning model might connect with this database
-    - We will connect python to PostgresSQL/pgAdmin and output cleaned data and machine learning results to PostgreSQL/pgAdmin. Here are some examples of code from the Movies-ETL challenge where we connected python to a PostgreSQL/pgAdmin database. 
-        ![python to sql 1](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_1.png)
-        ![python to sql 2](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_2.png)
-        ![python to sql 3](https://github.com/mgsrichard/Capstone-Project/blob/main/resources/python_to_sql_3.png)
-
 ### A Summary of Data Cleaning Steps can be seen below: 
 - Reduced noisy data:
     - Checking for usable DataTypes
@@ -149,30 +52,57 @@ Drop. All values are NA. Was probably the original education column before split
 ![image](https://user-images.githubusercontent.com/94234511/165017211-e74f4ac0-5d85-40c2-b3e9-8dc4e6103c8a.png)
 
 - Other Data Cleaning
-    - Drop 29 duplicate rows, 0 duplicate columns 
-    - Drop unwanted columns
-    - Remove null values
-        - gender                     19540
-        - otherdetails               22505
-    - Drop 5 rows where company is NaN missing rows (data now has 62,637 rows) 
-    - Convert timestamp field from object to datetime
-    - Clean-up erroneous data values in location and gender columns
-        - The total number of rows with data in the education columns is 30472 out of 62637 rows
-        - The total number of rows with data in the race columns is 22426 out of 62637 row
-    - Identified and corrected additional typographical and formatting errors in the data
+    - PERFORM ADDITIONAL Data Cleaning 
+0 duplicate columns/rows found in dataset 
+Drop 4 unwanted columns 'level’, 'tag’ 'Race’, 'Education'
+Identify & Remove null values
+gender                     19,540
+otherdetails               22,505
+Drop 5 rows where company is NaN missing rows (data now has 62,637 rows) 
+Convert timestamp field from object to ‘datetime’
+Clean-up erroneous data values in location, education and gender columns
+The total number of rows with data in the education columns is 30,472
+The total number of rows with data in the race columns is 22,426
+Identified and corrected additional typographical and formatting errors in the location data
+
+![image](https://user-images.githubusercontent.com/94234511/166167460-6cb661a8-fb59-420c-bdec-b80b2a868d46.png)
+
 
 [image](https://user-images.githubusercontent.com/94234511/165016989-32fba604-96b3-49f5-86cb-f5b0b0c6cc43.png)
 ### Feature Engineering
 
 FEATURE ENGINEERING – Salary level
+- For rows where basesalary = 0, set equal to totalyearlycompensation 
+- Assign a target value from the base salary by bucketing
+    - Mean + 2SD = 
+    - 149,172 + 2(44,382) = $237,936
+    - Max. salary = $350, 000
+- Create a function to generate salary levels using salary bands of $25,000 for a total of 15 salary levels
+ 
+![image](https://user-images.githubusercontent.com/94234511/166167543-dc6a7b22-8e1f-4428-907a-f3e5f186abcf.png)
+
+
 [image](https://user-images.githubusercontent.com/94234511/165017640-5e7a482b-a2a0-4eac-b7ab-19f0c29a18d1.png)
 
 - For rows where basesalary = 0, set equal to totalyearlycompensation 
 - Create a target value from the base salary by bucketing
 - Mean plus two std dev. would be 149,172 + 44,382 + 44,382 = 237,936
 - #Make salary bands of 25,000 for a total of 15 salary levels 
-- 
+
+
 ![image](https://user-images.githubusercontent.com/94234511/165017702-7ade3729-a629-4d65-ae82-48ed8e3dd5aa.png)
+
+
+### Feature Engineering - Regions 
+- Look at each metro area and calculate the distances from downtown and include participants within 30-50 miles. 
+- Start by naming & retrieving long/lat for each metro area
+- Use an openweathermap API call to get the long and lat for each city and state combination
+- Create a loc group for each of the top 9 regions
+- For each region, calculate the distance from the central metro
+- Use this distance to decide who to include in that region, be consistent if it makes sense to
+- Avoid geographical overlap any of the identified regions
+- Respondents not captured in the top 9 regions are grouped into region 10.
+
 
 ### Machine Learning Model
 -	Present a provisional machine learning model
@@ -224,8 +154,11 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 ![image](https://user-images.githubusercontent.com/94234511/165018973-6b9fe9ca-8b6b-448c-a00a-361e44b710b7.png)
 
 ### Database Connection 
-- We envision two possible ways to populate the data in our web table:
-    - Connect our web table to the python machine learning model and directly run the model each time a user enters search terms
-    - Create a large table to input into the machine learning model which will incorporate all possible permutations of input, use the machine learning model to predict salaries for each potential query, and combine the input plus the salary predictions into a large table that is static and searched each time the user enters search terms.
+- Export the Model from Python file
+- Create Config file (app.py) & Import Model
+- Write the function to import the cleaned and preprocessed datafile 
+- Create the HTML file and use HERIKO to connect to Tableau Dashboard
+
+ 
     - ![image](https://user-images.githubusercontent.com/94234511/165018712-c916da49-3c1d-46ce-9721-588e4cae3041.png)
 
