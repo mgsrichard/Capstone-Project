@@ -119,8 +119,15 @@ FEATURE ENGINEERING – Salary level
 
 ![image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
 
-r = 
+- LINEAR REGRESSION – YEARS AT COMPANY![image](https://user-images.githubusercontent.com/94234511/166168327-4e539645-27c4-4f27-b9f9-33fb43c386cf.png)
 
+![image](https://user-images.githubusercontent.com/94234511/166168321-6467d371-c026-4e64-8c95-e7a1eb891998.png)
+
+Total salary by Years at Company
+r= 0.14
+Weaker correlation for predictive model
+Correlation was not improved when base salary was used as output for either yrs. of exp. or yrs. at company
+![image](https://user-images.githubusercontent.com/94234511/166168311-368591bd-0604-4747-8c76-6c1fa4feb6e5.png)
 
 - Provisonal Learing Model Selection 
 Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
