@@ -42,7 +42,8 @@ Data Science and STEM Salaries from June 7, 2017 to August 17, 2021
 - Present our results via an interactive table to predict salaries for data scientists and STEM professionals based on the most predictive features
 
 Here is a visual illustration of our project
- 
+![image](https://user-images.githubusercontent.com/94234511/166168022-3b57bea0-5c07-4caf-aa3b-1cf2ee33154f.png)
+
 ### A Summary of Data Cleaning Steps can be seen below: 
 - Reduced noisy data:
     - Checking for usable DataTypes
@@ -65,10 +66,9 @@ The total number of rows with data in the education columns is 30,472
 The total number of rows with data in the race columns is 22,426
 Identified and corrected additional typographical and formatting errors in the location data
 
-![image](https://user-images.githubusercontent.com/94234511/166167460-6cb661a8-fb59-420c-bdec-b80b2a868d46.png)
+![image](https://user-images.githubusercontent.com/94234511/166168046-cd012dcd-c47b-449b-8705-e9cb90a5fb90.png)
 
 
-[image](https://user-images.githubusercontent.com/94234511/165016989-32fba604-96b3-49f5-86cb-f5b0b0c6cc43.png)
 ### Feature Engineering
 
 FEATURE ENGINEERING – Salary level
@@ -78,11 +78,7 @@ FEATURE ENGINEERING – Salary level
     - 149,172 + 2(44,382) = $237,936
     - Max. salary = $350, 000
 - Create a function to generate salary levels using salary bands of $25,000 for a total of 15 salary levels
- 
-![image](https://user-images.githubusercontent.com/94234511/166167543-dc6a7b22-8e1f-4428-907a-f3e5f186abcf.png)
 
-
-[image](https://user-images.githubusercontent.com/94234511/165017640-5e7a482b-a2a0-4eac-b7ab-19f0c29a18d1.png)
 
 - For rows where basesalary = 0, set equal to totalyearlycompensation 
 - Create a target value from the base salary by bucketing
@@ -102,6 +98,7 @@ FEATURE ENGINEERING – Salary level
 - Use this distance to decide who to include in that region, be consistent if it makes sense to
 - Avoid geographical overlap any of the identified regions
 - Respondents not captured in the top 9 regions are grouped into region 10.
+![image](https://user-images.githubusercontent.com/94234511/166168066-02901e7d-4db9-4f2d-805b-0b7f8d9ee008.png)
 
 
 ### Machine Learning Model
@@ -181,17 +178,21 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
     - Random Forest Model 
     - Predictive Accuracy is slightly >39%
 
+![image](https://user-images.githubusercontent.com/94234511/166168100-cae31792-a761-4885-abc4-b3d1f36d3cc1.png)
 
-![image](https://user-images.githubusercontent.com/94234511/166167768-a9d03201-4c80-4ef5-b230-9e013bd79b04.png)
+![image](https://user-images.githubusercontent.com/94234511/166168107-cfaab2c8-f95a-4d1f-b4f2-731956df685c.png)
 
- 
- 
-![image](https://user-images.githubusercontent.com/94234511/166167705-0b24ce2a-8717-4ab1-bae2-8d266068284d.png)
-
-
+![image](https://user-images.githubusercontent.com/94234511/166168114-d520f4b7-8385-4cfd-8e58-a7ca2110dbcb.png)
 
 ![image](https://user-images.githubusercontent.com/94234511/166167679-a7a55213-6a4a-4ad6-ac01-8f5777fa726e.png)
 
 
 ### Discussion
+We explored Unsupervised Learning models.  The outcome of the most intersting one is provided below.  See the presentation for additional details.
+
+- Amazon, Facebook, Microsoft, Google, and Apple accounted for 35% of all jobs listed
+- The best accuracy for salary prediction used the linear regression model on each company’s data individually, with Microsoft > 60% accuracy
+![image](https://user-images.githubusercontent.com/94234511/166168136-9fa0e07a-515b-4f59-9438-ba297436628f.png)
+
+![image](https://user-images.githubusercontent.com/94234511/166168124-98f09a1d-e171-4691-8b30-9364ae7b68e0.png)
 
