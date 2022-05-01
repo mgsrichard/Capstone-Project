@@ -126,7 +126,6 @@ FEATURE ENGINEERING – Salary level
 - r= 0.14
 - Weaker correlation for predictive model
 - Correlation was not improved when base salary was used as output for either yrs. of exp. or yrs. at company
-![image](https://user-images.githubusercontent.com/94234511/166168311-368591bd-0604-4747-8c76-6c1fa4feb6e5.png)
 
 #### Learing Model Selection
 
