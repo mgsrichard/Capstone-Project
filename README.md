@@ -160,6 +160,9 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
  
     - ![image](https://user-images.githubusercontent.com/94234511/165018712-c916da49-3c1d-46ce-9721-588e4cae3041.png)
 
+#### Connect to the Prediction Tool at the url below
+https://stem-salary-predictor.herokuapp.com/
+
 ### Conclusions
 
 #### Data Analysis
