@@ -17,7 +17,7 @@ Updated 05-01-2022
 ### Presentation:
 -	Include your choice of a PowerPoint, Word Document, ReadMe file, etc. with the following information
     - The project is described in detail in this README
-    - The PowerPoint file https://github.com/mgsrichard/Capstone-Project/blob/main/Segment%202_presentation.pptx gives a more sophisticated and slightly more detailed overview/presentation of our project
+    - The PowerPoint file https://github.com/mgsrichard/Capstone-Project/blob/main/Segment%203_presentation.pptx a more sophisticated and slightly more detailed overview/presentation of our project
 - Here is the agenda for Segment 3 Presentation: 
     - ![image](https://user-images.githubusercontent.com/94234511/165016366-5de88506-e051-4632-9789-8604236e30a1.png)
 
