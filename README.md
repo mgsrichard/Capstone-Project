@@ -1,7 +1,7 @@
 # Capstone-Project
 Group project at end of boot camp <br>
 Martha, Lucien and Cheryl
-Updated 04-24-2022
+Updated 05-01-2022
 
 ### GitHub:
 -	Your Main Branch has a ReadMe file 
@@ -118,11 +118,11 @@ FEATURE ENGINEERING – Salary level
 - Linear Regression Model 
 ![image](https://user-images.githubusercontent.com/94234511/165017486-a6b8859d-50dc-4456-97c9-eadfdf22a8bc.png)
 
-- The slope = [5040.09]
-- The y-intercept = 163190.93
 - r = 0.398 
 
 ![image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
+
+r = 
 
 
 - Provisonal Learing Model Selection 
@@ -137,7 +137,6 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 [image](https://user-images.githubusercontent.com/94234511/165017873-0e6f772a-99c2-4bb1-b92c-dc0b89dc1e8d.png)
 
 - Predictive Accuracy = 0.41 
-- F1 Score = 0.41
 
 ![image](https://user-images.githubusercontent.com/94234511/165019015-215f1b6a-e36a-49bf-8830-c6fe4ba4df6d.png)
 
@@ -149,7 +148,6 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 ![image](https://user-images.githubusercontent.com/94234511/165018007-b5dc4247-cf21-4369-afbd-f0cf9165ea16.png)
 
 - Predictive Accuracy = 0.391
-- F1 Score = 0.39!
 
 ![image](https://user-images.githubusercontent.com/94234511/165018973-6b9fe9ca-8b6b-448c-a00a-361e44b710b7.png)
 
@@ -158,7 +156,42 @@ Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classificat
 - Create Config file (app.py) & Import Model
 - Write the function to import the cleaned and preprocessed datafile 
 - Create the HTML file and use HERIKO to connect to Tableau Dashboard
-
  
     - ![image](https://user-images.githubusercontent.com/94234511/165018712-c916da49-3c1d-46ce-9721-588e4cae3041.png)
+
+### Conclusions
+
+#### Data Analysis
+- California is the state with the highest average base salary ($161,393)
+- Of the 15 tiles reported, Software Engineering Managers earned the highest average salary of $185,658 annually
+- 79% of respondents were employed in the top 9 regions. 
+- Of 1631 total companies, 35% of the responses were represented by the top 5 employers: Amazon, Apple, Facebook, Google and Microsoft
+- Only 36% reported race, of them 52% identified as Asian 
+- Only 49% reported Education Level, of them 51% had a Masters Degree
+
+- The gender variable was confusing:
+    - 19,540 (31%) respondents did not report gender
+    - 35,698 (XX%) of respondents identified as male
+    - 
+ #### Predictive Model Outcomes 
+- The data was noisy, often incomplete for some variables causing some analysis to be impossible.
+- Data was clustered in certain geographical areas and needed considerable engineering to be useable.
+- The presumed linear relationship between salary and years of experience was not as closely correlated as expected, r=0.39. 
+- The model we chose for our salary range prediction tool: 
+    - Random Forest Model 
+    - Predictive Accuracy is slightly >39%
+
+
+![image](https://user-images.githubusercontent.com/94234511/166167768-a9d03201-4c80-4ef5-b230-9e013bd79b04.png)
+
+ 
+ 
+![image](https://user-images.githubusercontent.com/94234511/166167705-0b24ce2a-8717-4ab1-bae2-8d266068284d.png)
+
+
+
+![image](https://user-images.githubusercontent.com/94234511/166167679-a7a55213-6a4a-4ad6-ac01-8f5777fa726e.png)
+
+
+### Discussion
 
