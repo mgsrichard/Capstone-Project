@@ -78,12 +78,16 @@ FEATURE ENGINEERING – Salary level
     - 149,172 + 2(44,382) = $237,936
     - Max. salary = $350, 000
 - Create a function to generate salary levels using salary bands of $25,000 for a total of 15 salary levels
-
+![image](https://user-images.githubusercontent.com/94234511/166168465-76cd2a7c-391f-4639-b826-416a027c68a1.png)
 
 - For rows where basesalary = 0, set equal to totalyearlycompensation 
 - Create a target value from the base salary by bucketing
 - Mean plus two std dev. would be 149,172 + 44,382 + 44,382 = 237,936
 - #Make salary bands of 25,000 for a total of 15 salary levels 
+
+![image](https://user-images.githubusercontent.com/94234511/166168398-4a0f7d46-0422-4798-aa6f-2b730fd034bb.png)
+
+![image](https://user-images.githubusercontent.com/94234511/166168409-5f62e922-c19d-4600-80f0-c4d0d043ed3c.png)
 
 
 ![image](https://user-images.githubusercontent.com/94234511/165017702-7ade3729-a629-4d65-ae82-48ed8e3dd5aa.png)
@@ -117,8 +121,6 @@ FEATURE ENGINEERING – Salary level
 
 - r = 0.398 
 
-![image](https://user-images.githubusercontent.com/94234511/165017508-9c255d38-b85d-4526-9061-68228697df15.png)
-
 - LINEAR REGRESSION – YEARS AT COMPANY![image](https://user-images.githubusercontent.com/94234511/166168327-4e539645-27c4-4f27-b9f9-33fb43c386cf.png)
 
 ![image](https://user-images.githubusercontent.com/94234511/166168321-6467d371-c026-4e64-8c95-e7a1eb891998.png)
@@ -132,6 +134,12 @@ Correlation was not improved when base salary was used as output for either yrs.
 - Provisonal Learing Model Selection 
 Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
 ![image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
+- Random Forest Models are used primarily for classifications problems but can be used for regression as well  
+- Algorithm creates decision trees on data samples and then gets the prediction from each of them and finally selects the best solution by means of voting. 
+        - More trees mean more robust forest
+- Reduces over-fitting by averaging the result![image](https://user-images.githubusercontent.com/94234511/166168438-93eb8e37-23e5-4395-8c0b-6f273ca33862.png)
+
+![image](https://user-images.githubusercontent.com/94234511/166168432-b3234997-d0cb-4fcc-af93-a0c584ec346c.png)
 
 #### RFM - All Features
 - Cleaned_Salary_Data.csv
