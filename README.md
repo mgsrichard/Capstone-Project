@@ -54,17 +54,17 @@ Here is a visual illustration of our project
 
 - Other Data Cleaning
     - PERFORM ADDITIONAL Data Cleaning 
-0 duplicate columns/rows found in dataset 
-Drop 4 unwanted columns 'level’, 'tag’ 'Race’, 'Education'
-Identify & Remove null values
-gender                     19,540
-otherdetails               22,505
-Drop 5 rows where company is NaN missing rows (data now has 62,637 rows) 
-Convert timestamp field from object to ‘datetime’
-Clean-up erroneous data values in location, education and gender columns
-The total number of rows with data in the education columns is 30,472
-The total number of rows with data in the race columns is 22,426
-Identified and corrected additional typographical and formatting errors in the location data
+- 0 duplicate columns/rows found in dataset 
+- Drop 4 unwanted columns 'level’, 'tag’ 'Race’, 'Education'
+- Identify & Remove null values
+        gender                     19,540
+        otherdetails               22,505
+- Drop 5 rows where company is NaN missing rows (data now has 62,637 rows) 
+- Convert timestamp field from object to ‘datetime’
+- Clean-up erroneous data values in location, education and gender columns
+- The total number of rows with data in the education columns is 30,472
+- The total number of rows with data in the race columns is 22,426
+- Identified and corrected additional typographical and formatting errors in the location data
 
 ![image](https://user-images.githubusercontent.com/94234511/166168046-cd012dcd-c47b-449b-8705-e9cb90a5fb90.png)
 
@@ -122,21 +122,16 @@ FEATURE ENGINEERING – Salary level
 
 ![image](https://user-images.githubusercontent.com/94234511/166168321-6467d371-c026-4e64-8c95-e7a1eb891998.png)
 
-Total salary by Years at Company
-r= 0.14
-Weaker correlation for predictive model
-Correlation was not improved when base salary was used as output for either yrs. of exp. or yrs. at company
+- Total salary by Years at Company
+- r= 0.14
+- Weaker correlation for predictive model
+- Correlation was not improved when base salary was used as output for either yrs. of exp. or yrs. at company
 ![image](https://user-images.githubusercontent.com/94234511/166168311-368591bd-0604-4747-8c76-6c1fa4feb6e5.png)
 
-- Provisonal Learing Model Selection 
-Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
-![image](https://user-images.githubusercontent.com/94234511/165017776-2a6ee2cf-6ba0-49a6-8123-514556bedc99.png)
-- Random Forest Models are used primarily for classifications problems but can be used for regression as well  
-- Algorithm creates decision trees on data samples and then gets the prediction from each of them and finally selects the best solution by means of voting. 
-        - More trees mean more robust forest
-- Reduces over-fitting by averaging the result![image](https://user-images.githubusercontent.com/94234511/166168438-93eb8e37-23e5-4395-8c0b-6f273ca33862.png)
+#### Learing Model Selection
 
-![image](https://user-images.githubusercontent.com/94234511/166168432-b3234997-d0cb-4fcc-af93-a0c584ec346c.png)
+Evaluate Supervised Learning Model - Ensemble Method - Random Forest Classification
+![image](https://user-images.githubusercontent.com/94234511/166168627-3d1159bc-5297-414c-bba9-228272a6b25d.png)
 
 #### RFM - All Features
 - Cleaned_Salary_Data.csv
